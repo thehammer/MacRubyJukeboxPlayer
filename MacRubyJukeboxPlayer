@@ -1,0 +1,11 @@
+#!/usr/bin/env macruby
+require 'player'
+
+$0 = "MacRubyJukeboxPlayer"
+
+pool = NSAutoreleasePool.alloc.init	
+
+Player.run
+
+pool.drain
+

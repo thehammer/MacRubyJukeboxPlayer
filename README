@@ -1,0 +1,7 @@
+This is a MacRuby based player engine for jukebox.rb. It uses Cocoa/Core Audio via MacRuby to play music tracks.
+
+It currently has some serious bugs:
+ - It leaks memory like Ten Second Tom.  MacRuby should handle Garbage Collection, but I'm probably doing something wrong and memory usage seems to go up steadily, about 10mb, with each new track played.  Not sure how to fix, but someone probably knows.
+ - It crashes pretty regularly, either seg faults, or "destination x isn't in the auto zone".  Seems like MacRuby 0.5 bugs.  Doesn't seem to happen in 0.4, but 0.4 doesn't work on OS X 10.6.
+
+If you're still on Leopard, and can deal with the memory leak, the current code might work for you.  Otherwise, I recommend using the CocoaJukeboxPlayer.
